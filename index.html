@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>js-18</title>
+    <style>
+        #yuti-1 {
+            width: 150px;
+            height: 60px;
+            border-radius: 30px;
+            border: 2px solid gray;
+            position: relative;
+        }
+
+        .yuti-2 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            background-color: gray;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        #teqsti {
+            position: absolute;
+            right: 20px;
+            top: 12px;
+            font-size: 32px;
+            font-family: monospace;
+            color: gray;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .yuti-3 {
+            background-color: gray;
+        }
+
+        .yuti-3 .yuti-2 {
+            background-color: white;
+            left: 95px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .yuti-3 #teqsti {
+            color: white;
+            right: 80px;
+            transition: all 0.4s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="yuti-1" onclick="shecvla()">
+        <div class="yuti-2"></div>
+        <span id="teqsti">On</span>
+    </div>
+
+    <script>
+
+        function shecvla() {
+
+            var yuti = document.getElementById("yuti-1");
+            yuti.classList.toggle("yuti-3");
+
+            var shigtavsi = document.getElementById("teqsti");
+
+            if (shigtavsi.innerHTML == "On") {
+                shigtavsi.innerHTML = "Off";
+            } else {
+                shigtavsi.innerHTML = "On";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
